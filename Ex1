@@ -1,0 +1,60 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int Verif_Num (int num);
+int Num_sorte (int num ,int cntsorte,int qtd);
+int numeros (int num);
+
+int main()
+{
+	int num ;
+
+	printf("Insere o numero da sequencia: ");
+	scanf("%d",&num);
+
+	if(Verif_Num(num)==0)
+	{
+		printf("O numero inserido nao e' positivo\n");
+
+		return 0;
+	}
+	else
+		printf("o numero %d da sorte sera %d\n",  num ,Num_sorte(3,0,num));
+	return 0;
+}
+
+int Verif_Num (int num)
+{
+	if(num>0)
+
+		return 1;
+	else 
+		return 0;
+}
+int Num_sorte (int num ,int cntsorte,int qtd)
+{
+	for(num=3;cntsorte<qtd;num++)
+	{
+		if(numeros(num)==1)
+		{
+			cntsorte++;
+
+		}
+	}
+	return num-1;
+
+}
+int numeros (int num)
+{
+
+	num=num%10;
+
+
+	if(num!=3 && num !=7)
+	{
+		return 0;
+	}
+	else
+		return 1;
+
+}
