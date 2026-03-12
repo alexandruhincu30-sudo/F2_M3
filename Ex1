@@ -46,15 +46,12 @@ int Num_sorte (int num ,int cntsorte,int qtd)
 }
 int numeros (int num)
 {
-
-	num=num%10;
-
-
-	if(num!=3 && num !=7)
+	do
 	{
-		return 0;
-	}
-	else
-		return 1;
+		if(num%10 !=3 && num%10 !=7)
+			return 0;
+		num=num/10;
+	}while(num>0);
 
+	return 1;
 }
