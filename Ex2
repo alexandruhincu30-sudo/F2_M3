@@ -1,1 +1,47 @@
+#include <stdio.h>
+
+
+int divid_num (int num , int cont_div);
+int main()
+
+{
+	int num,qnums ,q_indeciso,indeciso,nao_indeciso;
+	printf("Insere o numero : ");
+	scanf("%d",&num);
+
+	for(qnums=0;qnums<=num;qnums++)
+	{
+		if(divid_num(num,0)==1)
+		{
+			indeciso++;
+			}
+		if(divid_num(num,0)==0)
+
+		{
+			q_indeciso++;
+		}
+		if(divid_num(num,0)==-1)
+		{
+			nao_indeciso++;
+		}
+	}
+
+	return 0;
+}
+
+int divid_num (int num,int cont_div)
+{
+	int divid;
+	
+	for(divid=0;cont_div<=num;divid++)
+	{
+		if(num%divid==0)
+		{
+			cont_div++;
+			
+		}
+		if(cont_div%10=4)
+
+}
+	)
 
